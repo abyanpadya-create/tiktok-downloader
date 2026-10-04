@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikTok Downloader</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎵 TikTok Downloader</h1>
+      <p class="subtitle">Unduh video TikTok tanpa watermark</p>
+    </header>
+
+    <main>
+      <div class="input-group">
+        <input 
+          type="text" 
+          id="urlInput" 
+          placeholder="Tempel link TikTok di sini (contoh: https://www.tiktok.com/@user/video/123...)"
+          autocomplete="off"
+        >
+        <button id="downloadBtn">
+          <span>Download</span>
+        </button>
+      </div>
+
+      <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <p>Memproses video...</p>
+      </div>
+
+      <div id="error" class="error hidden"></div>
+
+      <div id="result" class="result hidden">
+        <div class="video-preview">
+          <video id="videoPlayer" controls poster=""></video>
+        </div>
+
+        <div class="video-info">
+          <h3 id="videoTitle">-</h3>
+          <p id="videoAuthor">-</p>
+          <p id="videoDuration">-</p>
+          
+          <div class="stats" id="videoStats"></div>
+
+          <div class="actions">
+            <a id="downloadVideoLink" class="btn-download" download>
+              ⬇️ Unduh Video
+            </a>
+            <a id="downloadMusicLink" class="btn-music hidden" download>
+              🎵 Unduh Audio
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Gunakan dengan bijak. Hormati hak cipta pembuat konten.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
